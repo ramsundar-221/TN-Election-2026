@@ -45,10 +45,11 @@ Majority Calculation
 Final Result
        ↓
 Live Dashboard
+```
 
-AWS Architecture
+## AWS Architecture
 
-
+```text
                  Frontend
               Expo / React Native
                      |
@@ -59,27 +60,27 @@ AWS Architecture
                   Lambda
                      |
           ┌──────────┴──────────┐
-          ↓                              ↓
-        RDS                 		DynamoDB
-   Master Election Data    		Live/Result Data
-                                		|
-                                		↓
-                               			SQS
-          		                        |
-                          		        ↓
-                    			Result Processing
-                        		        |
-              	       ┌─────────────────┼─────────────────┐
-         	       ↓                        ↓                        ↓
-        		Party Tally       Alliance Tally     Final Result
-              			|                 |                 |
-              			└────────────┴────────────┘
-                             			   |
-                                		   ↓
-                         		Election Dashboard
+          ↓                     ↓
+        RDS         		DynamoDB
+   Master Election Data   	Live/Result Data
+                         		|
+                         		↓
+                 			SQS
+                                   |
+                                   ↓
+                    		Result Processing
+                 		        |
+        	    ┌─────────────────┼─────────────────┐
+         	    ↓                 ↓                 ↓
+        	Party Tally       Alliance Tally     Final Result
+      		    |                 |                 |
+                  └─────────────────┴─────────────────┘
+                             	 |
+                          	        ↓
+                         	Election Dashboard
+```
 
-
-AWS Services used
+## 🛠️ AWS Services Used
 
 | AWS Service         | Resource / Name                              | Purpose                         |
 | ------------------- | -------------------------------------------- | ------------------------------- |
@@ -106,7 +107,7 @@ AWS Services used
 | Amazon CloudWatch   | Lambda Log Groups                            | Monitoring and troubleshooting  |
 
 Processing Workflow
-
+```text
 User
  |
  ↓
@@ -150,7 +151,7 @@ ElectionFinalResult
  |
  ↓
 Dashboard
-
+```
 
 Project Phases
 
@@ -171,14 +172,14 @@ Security & Access Management
 Frontend
 
 The application was developed using:
-
+```text
 Expo
 React Native
 TypeScript
 Expo Router
-
+```
 Dashboard Features
-
+```text
 Election result overview
 CM candidate cards
 Live seat position
@@ -189,24 +190,24 @@ Alliance-wise seat tally
 Constituency-wise results
 Individual party winning details
 Final election status
-
+```
 Database Architecture
 
 Amazon RDS
 
 Used for relatively stable and relational election master data such as:
-
+```text
 Districts
 Constituencies
 Parties
 Alliances
 Candidates
 Candidate–constituency relationships
-
+```
 Amazon DynamoDB
 
 Used for frequently changing and processed election data:
-
+```text
 LiveVoteCounts
        ↓
 ElectionResults
@@ -216,11 +217,11 @@ ElectionPartyTally
 ElectionAllianceTally
        ↓
 ElectionFinalResult
-
+```
 Asynchronous Processing
 
 Amazon SQS was introduced to make the processing workflow more reliable.
-
+```text
 Vote Update
     ↓
 SQS Queue
@@ -232,7 +233,7 @@ Party Tally
 Alliance Tally
     ↓
 Final Result
-
+```
 Security
 
 The project uses:
