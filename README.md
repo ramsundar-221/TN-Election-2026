@@ -324,7 +324,7 @@ Security
 Monitoring
 Frontend-cloud integration
 
-Documentation
+## Documentation
 
 The complete project documentation contains:
 
