@@ -47,7 +47,7 @@ Final Result
 Live Dashboard
 ```
 
-## AWS Architecture
+## ☁️ AWS Architecture
 
 ```text
                  Frontend
@@ -106,7 +106,7 @@ Live Dashboard
 | AWS IAM             | Lambda roles/policies                        | Access management               |
 | Amazon CloudWatch   | Lambda Log Groups                            | Monitoring and troubleshooting  |
 
-Processing Workflow
+## 🔄 Processing Workflow
 ```text
 User
  |
@@ -153,7 +153,7 @@ ElectionFinalResult
 Dashboard
 ```
 
-Project Phases
+## 📋 Project Phases
 
 The project was implemented in 11 phases:
 
@@ -169,7 +169,7 @@ Election Dashboard & Frontend
 Monitoring, Testing & Validation
 Security & Access Management
 
-Frontend
+## 📱 Frontend
 
 The application was developed using:
 ```text
@@ -178,6 +178,7 @@ React Native
 TypeScript
 Expo Router
 ```
+
 Dashboard Features
 ```text
 Election result overview
@@ -191,7 +192,8 @@ Constituency-wise results
 Individual party winning details
 Final election status
 ```
-Database Architecture
+
+## 🗄️ Database Architecture
 
 Amazon RDS
 
@@ -218,7 +220,8 @@ ElectionAllianceTally
        ↓
 ElectionFinalResult
 ```
-Asynchronous Processing
+
+## ⚡ Asynchronous Processing
 
 Amazon SQS was introduced to make the processing workflow more reliable.
 ```text
@@ -234,7 +237,7 @@ Alliance Tally
     ↓
 Final Result
 ```
-Security
+## 🔐 Security
 
 The project uses:
 
@@ -246,7 +249,7 @@ VPC network segmentation
 
 RDS credentials are stored securely using: TN-Election-RDS-Credentials
 
-Testing & Monitoring
+## 🧪 Testing & Monitoring
 
 The complete workflow was tested from vote submission to final result display.
 
@@ -283,7 +286,7 @@ Problem: Party/alliance tallies were not always reflected immediately.
 
 Solution: Automated the processing chain
 
-What I Learned
+## 📚 What I Learned
 
 Through this project, I gained practical experience in:
 
@@ -305,7 +308,7 @@ Cloud troubleshooting
 
 The project also provided practical experience in troubleshooting issues such as AccessDeniedException, Lambda Rate Exceeded errors, API integration issues and frontend/Metro errors.
 
-Project Complexity
+## 🎓 Project Complexity
 
 Instead of implementing the application using a simple single Lambda and database architecture, the project deliberately uses multiple AWS services and processing stages.
 
